@@ -1,0 +1,362 @@
+\question
+\qpart
+假设位于$x$的消费者在厂商1 和厂商2的消费效用相同，则有：
+\begin{align}
+     u_{1,x}&=u_{2,x} \notag \\ 
+     v_1-tx-p_1 &= v_2-t(1-x)-p_2 \notag \\
+     \therefore \  x &= \frac{v_1-v_2+p_2-p_1+t}{2t}
+\end{align}
+则位于[o,x)上的消费者在厂商1的消费效用大于在厂商2的消费效用，因此都会选择去厂商1； 位于(x,1]上的消费者在厂商2的消费效用大于在厂商2的消费效用，因此都会选择去厂商2。则厂商1和厂商2的利润$\pi_1$和$\pi_2$满足：
+\begin{align}
+    \pi_1 &= p_1x = p_1\frac{v_1-v_2+p_2-p_1+t}{2t}  \notag \\
+    \pi_2 &= p_2(1-x) = p_2\frac{v_2-v_1+p_1-p_2+t}{2t}   \notag
+\end{align}
+使厂商1和厂商2利润最大化的价格$p_1^{\star}$和$p_2^{\star}$应满足一阶条件等于0，即：
+\begin{align}
+    \frac{\partial \pi_1 }{\partial p_1} &=\frac{v_1-v_2+p_2-2p_1^{\star}+t}{2t} = 0 \notag \\
+    \therefore \ p_2-2p_1^{\star} &= v_2-v_1-t \\
+    \frac{\partial \pi_2 }{\partial p_2} &=\frac{v_2-v_1+p_1-2p_2^{\star}+t}{2t} = 0 \notag \\
+    \therefore \ p_1-2p_2^{\star} &= v_1-v_2-t 
+\end{align}
+联立式(1.2)和式(1.3)，可得均衡的$(p_1^{\star},p_2^{\star})$：
+\begin{equation}
+  \begin{cases}
+p_1^{\star} = t+\frac{v_1-v_2}{3} \\
+p_2^{\star} = t+\frac{v_2-v_1}{3}
+\end{cases}  
+\end{equation}
+
+\qpart
+不妨设厂商1和厂商2的定价分别为$p_1(x)$和$p_2(x)$（$p_1(x)\geq0$，$p_2(x)\geq 0$），是消费者所在位置$x$的函数，并且满足：
+\begin{equation}
+   \begin{cases}
+    \frac{\partial p_1(x)}{\partial x}&\leq0 \\
+    \frac{\partial p_2(x)}{\partial x}&\geq0
+\end{cases} 
+\end{equation}
+
+
+即对于厂商1而言，x越大意味着消费者距离越远，交通成本越高，为了吸引消费者x会降价，因此$p_1(x)$随着$x$的增加而减少；
+对于厂商2而言，x越大意味着消费者距离越近，交通成本越低，因此$p_2(x)$随着$x$的增加而增加。
+
+同样的，假设位于$x$的消费者在厂商1 和厂商2的消费效用无差异，则有：
+\begin{align}
+     u_{1,x}&=u_{2,x} \notag \\ 
+     v_1-tx-p_1(x) &= v_2-t(1-x)-p_2(x) \notag \\
+     \therefore \  x &= \frac{v_1-v_2+p_2(x)-p_1(x)+t}{2t}
+\end{align}
+则厂商1和厂商2的利润$\pi_1$和$\pi_2$满足：
+\begin{align}
+    \pi_1 &=\int_0^x p_1(x)dx \\
+    \pi_2 &= \int_x^1 p_2(x)dx 
+\end{align}
+不妨设$F_1(x)$和$F_2(x)$满足：
+\begin{equation*}
+    F_i^{'} (x) = p_i(x)
+\end{equation*}
+则式(1.7)和式(1.8)可以写为：
+\begin{align}
+    \pi_1(x) &=F_1(x)-F_1(0) \\
+    \pi_2(x) &=F_2(1)-F_2(x)
+\end{align}
+利润最大化下，应满足：
+\begin{align}
+    \frac{\partial \pi_i(x) }{\partial p_i} &=\frac{\partial \pi_i(x)}{\partial x}\bigg/\frac{\partial p_i(x)}{\partial x}=0 
+\end{align}
+分母$\frac{\partial p_i(x)}{\partial x}$不为0，因此有：
+\begin{align}
+    \frac{\partial \pi_i(x)}{\partial x} &=0 \notag\\
+    \therefore &\begin{cases}
+      \frac{\partial \pi_1(x)}{\partial x} = p_1(x) =0 \\
+      \frac{\partial \pi_2(x)}{\partial x} = -p_2(x) =0
+\end{cases}  \notag \\
+    \therefore x &= \frac{v_1-v_2+t}{2t} 
+\end{align}
+又因为$p_2$在$[0,\frac{v_1-v_2+t}{2t})$上单调递增且，$p_2(x)=0$，所以在$[0,\frac{v_1-v_2+t}{2t})$上，$p_{2,x}\equiv0$；同理，在$(\frac{v_1-v_2+t}{2t},1]$上，$p_{1,x}\equiv0$。
+
+因此，在$[0,\frac{v_1-v_2+t}{2t})$上有：
+\begin{align}
+    u_1 \geq u_2 & \ and \ p_{2,x}=0 \notag \\
+    v_1-tx-p_1(x) &\geq v_2-t(1-x)-p_2(x) \notag \\
+    v_1-tx-p_1(x) &\geq v_2-t(1-x) \notag \\
+   0\leq p_1(x) & \leq v_1-v_2+t-2tx 
+\end{align}
+为使利润尽可能地高，厂商应尽量提高价格因此有:
+\begin{equation}
+    p_1(x) = v_1-v_2+ t-2tx 
+\end{equation}
+
+同理，在$(\frac{v_1-v_2+t}{2t},1]$上，厂商2的价格满足：
+\begin{equation}
+    p_2(x) =  v_2-v_1-t+2tx 
+\end{equation}
+
+综上，在均衡时，价格$(p_1^{\star},p_2^{\star})$为：
+\begin{equation}
+p_1^{\star}(x)=
+    \begin{cases}
+      &  v_1-v_2+t-2tx,  \ x \in [0,\frac{v_1-v_2+t}{2t}] \\
+     &0 ,\  x \in ( \frac{v_1-v_2+t}{2t},1]
+    \end{cases}
+\end{equation}
+
+\begin{equation}
+p_2^{\star}(x)= 
+    \begin{cases}
+     & 0,  \ x \in [0,\frac{v_1-v_2+t}{2t}] \\
+     & v_2-v_1-t+2tx ,\  x \in ( \frac{v_1-v_2+t}{2t},1]
+    \end{cases}
+\end{equation}
+
+\qpart
+对于消费者$x$，所能接受的最大价格满足$u_1=0, u_2=0  $，因此最大价格$p^m_{1,x}$，$p^m_{2,x}$等价于：
+\begin{align}
+&p_1^m=v_1-t x \\
+&p_2^m=v_2-t(1-x)
+\end{align}
+
+第一问的消费者剩余为$S^a$，均衡点（消费者效用无差异）为$x_0^a$，均衡价格为$(p_1^{\star(a)},p_2^{\star(a)})$；第二问的消费者剩余为$S^b$，均衡点）为$x_0^b$,均衡价格为$(p_1^{\star(b)},p_2^{\star(b)})$：
+\begin{align}
+    S^a &= \int_0^{x_0^a}(p_1^m-p_1^{\star(a)})dx+\int_{x_0^a}^{1}(p_2^m-p_2^{\star(a)})dx \\
+    S^b &= \int_0^{x_0^b}(p_1^m-p_1^{\star(b)})dx+\int_{x_0^b}^{1}(p_2^m-p_2^{\star(b)})dx 
+\end{align}
+将式(1.1)、式(1.4)、式(1.12)及(1.16-1.19)代入式(1.20)与式(1.21)整理得到:
+\begin{align}
+S^a&=\int_0^{x_0^a}\left(v_1-t x-t-\frac{v_1-v_2}{3}\right) d x+\int_{x_0^a}^1\left(v_2-t(1-x)-t-\frac{v_2-v_1}{3}\right) d x \notag \\
+&=\int_0^{x_0^a}\left[-t x+\frac{2 v_1+v_2-3 t}{3}\right] d x+\int_{x_0^a}^1\left[t x+\frac{2 v_2+v_1-6 t}{3}\right] d x \notag \\
+&=-\frac{t}{2} x^2+\left.\frac{2 v_1+v_2-3 t}{3} x\right|_0 ^{x_0^a}+\frac{t x^2}{2}+\left.\frac{2 v_2+v_1-6 t}{3} x\right|_{x_0^a}^1 \notag \\
+&=-\frac{t}{2}\left(x_0^a\right)^2+\frac{2 v_1+v_2-3 t}{3} x_0^a+\frac{t}{2}+\frac{2 v_2+v_1-6 t}{3}-\frac{t}{2}\left(x_0^a\right)^2-\frac{2 v_2+v_1-6t}{3} x_0^a \notag \\
+&=-t\left(x_0^a\right)^2+\frac{v_1-v_2+3 t}{3} x_0^a+\frac{t}{2}+\frac{2 v_2+v_1-6 t}{3} \notag \\
+&=\frac{\left(v_1-v_2+3 t\right)^2}{36 t}+\frac{2 v_2+v_1}{3}-\frac{3t}{2}
+\end{align}
+
+\begin{align}
+ S^b&=\int_0^{x_0^b}\left(v_1-t x-v_1+v_2-t+2 t x\right) d x+\int_{x_0^b}^1\left(v_2-t(1-x)-v_2+v_1-2 t x\right) d x \notag \\
+&=\int_0^{x_0^b}\left(v_2-t+t x\right) d x+\int_{x_0^b}^1\left(v_1-t x\right) d x \notag\\
+&= \left.\frac{t}{2} x^2+\left(v_2-t\right)  \right|_0^{x_0^b}+\left.\left(-\frac{t}{2} x^2\right)+v_1 x\right|_{x_0^b} ^1 \notag\\
+&= \frac{t}{2}\left(x_0^b\right)^2+\left(v_2-t\right) x_0^b-\frac{t}{2}+v_1+\frac{t}{2}\left(x_0^b\right)^2-v_1 x_0^b \notag\\
+&=t\left(x_0^b\right)^2+\left(v_2-v_1-t\right) x_0^b+v_1-\frac{t}{2} \notag\\
+&=\frac{\left(v_1-v_2+t\right)^2}{4 t}+\frac{\left(v_2-v_1-t\right)\left(v_1-v_2+t\right)}{2 t}+v_1-\frac{t}{2} \notag \\
+&=-\frac{\left(v_1-v_2+t\right)^2}{4 t}+v_1-\frac{t}{2} .
+\end{align}
+当消费者总剩余减少时，有$S^b\textless S^a$：
+\begin{align}
+&\frac{\left(v_1-v_2+3 t\right)^2}{36 t}+\frac{2 v_2+v_1}{3}-\frac{3 t}{2}+\frac{\left(v_1-v_2+t\right)^2}{4 t}-v_1+\frac{t}{2}>0 \notag\\
+&\frac{\left(v_1-v_2\right)+6 t\left(v_1-v_2\right)+9 t^2+9\left(v_1-v_2\right)^2+18\left(v_1-v_2\right) t+9 t^2}{36 t}+\frac{2\left(v_2-v_1\right)}{3}-t>0 . \notag \\
+&\frac{10\left(v_1-v_2\right)^2+24 t\left(v_1-v_2\right)+18 t^2}{36 t}+\frac{2\left(v_2-v_1\right)}{3}-t>0 \notag \\
+&\frac{5\left(v_1-v_2\right)^2+12 t\left(v_1-v_2\right)+9 t^2-12\left(v_1-v_2\right) t-18 t^2}{18 t}>0 \notag \\
+& \qquad \ \qquad \ \qquad  \qquad  \qquad \ \qquad \ 5\left(v_1-v_2\right)^2>9 t^2
+\end{align}
+因此，当$v_1$、$v_2$和$t$满足式(1.24)时，价格歧视降低了消费者总剩余。
+\qpart
+\qsubpart 
+在$v_1=v_2$条件下，
+假设位于$x$的消费者在厂商1 和厂商2的消费效用相同，则有：
+\begin{align}
+     u_{1,x}&=u_{2,x} \notag \\ 
+     v_1-tx-p_1 &= v_2-t(1-x)-p_2 \notag \\
+     \therefore \  x &= \frac{p_2-p_1+t}{2t}
+\end{align}
+
+则位于$[0,\frac{p_2-p_1+t}{2t})$上的消费者都会选择去厂商1； 位于$(\frac{p_2-p_1+t}{2t},1]$上的消费者都会选择去厂商2。则厂商1和厂商2的利润$\pi_1$和$\pi_2$满足：
+
+\begin{align}
+    \pi_1 &=p_1F(\frac{p_2-p_1+t}{2t})   \notag \\
+    &=p_1(\frac{p_2-p_1+t}{2t})^a \\
+    \pi_2 &=p_2\left[1-F(\frac{p_2-p_1+t}{2t}) \right]  \notag \\
+    &=p_2\left[1-(\frac{p_2-p_1+t}{2t})^a\right] 
+\end{align}
+
+使厂商1和厂商2利润最大化的价格$p_1^{\star}$和$p_2^{\star}$应满足一阶条件等于0，即：
+\begin{align}
+    \frac{\partial \pi_1 }{\partial p_1} &=(\frac{p_2-p_1^{\star}+t}{2t})^a -\frac{ap_1^{\star}}{2t}(\frac{p_2-p_1^{\star}+t}{2t})^{a-1} =0\notag \\
+    &p_1^{\star}=\frac{p_2+t}{a+1} \\
+    \frac{\partial \pi_2 }{\partial p_2} 
+    &=1-(\frac{p_2^{\star}-p_1+t}{2t})^a-\frac{ap_2^{\star}}{p_2^{\star}-p_1+t}(\frac{p_2^{\star}-p_1+t}{2t})^a=0 \notag \\
+    &=\left[(\frac{2t}{p_2^{\star}-p_1+t})^a-\frac{(a+1)p_2^{\star}-p_1+t}{p_2^{\star}-p_1+t}\right](\frac{p_2^{\star}-p_1+t}{2t})^a=0 
+\end{align}
+
+当$a=0$，则式(1.29)$\equiv 0 $，则无论$p_2$为何值，都可以使厂商2的利润最大，因此没有稳定的均衡，不可取。
+
+当$a>0$,若式(1.29)第二项等于0，则：
+\begin{align}
+    p_2^{\star}-p_1+t &= 0 
+\end{align}
+将式(1.30)与式(1.28)联立，得：
+\begin{align}
+    \begin{cases}
+     p_1^{\star} = 0 \\
+     p_2^{\star} =-t  \\
+    \end{cases}
+\end{align}
+与$p_2\geq0$的假设矛盾，不可取。
+
+若式(1.29)第一项等于0，则：
+\begin{align}
+    (\frac{2t}{p_2^{\star}-p_1+t})^a-\frac{(a+1)p_2^{\star}-p_1+t}{p_2^{\star}-p_1+t} = 0
+\end{align}
+将式(1.32)与式(1.28)联立，得：
+\begin{align}
+&p_1=\frac{p_2+t}{a+1}\\
+&p_2=(a+1) p_1-t  \\
+&\left(\frac{2 t}{p_2-p_1+t}\right)^{a}-\frac{(a+1) p_2-p_1+t}{p_2-p_1+t}=0 \notag\\
+&\left(\frac{2 t}{a p_1}\right)^a-\frac{a p_2+a p_1}{a p_1}=0 \notag\\
+&\left(\frac{2 t}{a p_1}\right)^a-\frac{a\left[(a+1) p_1-t\right]+a p_1}{a p_1}=0\notag\\
+&\left(\frac{2 t}{a p_1}\right)^a-\frac{(a+2) p_1-t}{p_1}=0\notag\\
+&\left(\frac{2 t}{a p_1}\right)^a+\frac{t}{p_1}=a+2 \notag\\
+&\left[\frac{(a+1) 2 t}{\left.a (p_2+t\right)}\right]^a+\frac{(a+1) t}{p_2+t}=a+2 
+\end{align}
+所以，均衡价格$(p_1^{\star},p_2^{\star})$等于：
+\begin{align}
+    \begin{cases}
+    & p_1^* \in\left\{p_1:\left(\frac{2 t}{a p_1}\right)^a+\frac{t}{p_1}=a+2 ; \quad p_1 \geqslant 0, a>0\right\} \\
+     &p_2^* \in\left\{p_2:\left(\frac{2}{a}\right)^a\left(\frac{(a+1) t}{p_2+t}\right)^a+\frac{(a+1) t}{p_2+t}=a+2 ; p_2\geqslant 0, a>0\right\}\\
+    \end{cases}
+\end{align}
+
+\qsubpart
+同样的，在$v_1=v_2$条件下，假设位于$x$的消费者在厂商1 和厂商2的消费效用相同，则有：
+\begin{align}
+     u_{1,x}&=u_{2,x} \notag \\ 
+     v_1-tx-p_1(x) &= v_2-t(1-x)-p_2(x) \notag \\
+     \therefore \  x &= \frac{p_2(x)-p_1(x)+t}{2t}
+\end{align}
+$p_i(x)$的假设与第二问相同。
+
+
+则厂商1和厂商2的利润$\pi_1$和$\pi_2$满足：
+\begin{align}
+    \pi_1 &=\int_0^x p_1(x)f(x)dx \\
+    \pi_2 &= \int_x^1 p_2(x)f(x)dx 
+\end{align}
+不妨设$F_1(x)$和$F_2(x)$满足：
+\begin{equation*}
+    H_i^{'} (x) = p_i(x)f(x) = h_i(x)
+\end{equation*}
+则式(1.7)和式(1.8)可以写为：
+\begin{align}
+    \pi_1(x) &=H_1(x)-H_1(0) \\
+    \pi_2(x) &=H_2(1)-H_2(x)
+\end{align}
+利润最大化下，应满足：
+\begin{align}
+    \frac{\partial \pi_i(x) }{\partial p_i} &=\frac{\partial \pi_i(x)}{\partial x}\bigg/\frac{\partial p_i(x)}{\partial x}=0 
+\end{align}
+分母$\frac{\partial p_i(x)}{\partial x}$不为0，因此有：
+\begin{align}
+    \frac{\partial \pi_i(x)}{\partial x} &=0 \notag\\
+    \therefore &\begin{cases}
+      \frac{\partial \pi_1(x)}{\partial x} = h_1(x) =p_1(x)x^{a-1}=0  \\
+      \frac{\partial \pi_2(x)}{\partial x} = -h_2(x) =p_2(x)x^{a-1}=0
+\end{cases}  \notag \\
+    \because & x^{a-1} \neq 0  \ \therefore p_i(x) =0\notag \\
+    \therefore x &= \frac{1}{2} 
+\end{align}
+又因为$p_2$在$[0,\frac{1}{2})$上单调递增且，$p_2(x)=0$，所以在$[0,\frac{1}{2})$上，$p_{2,x}\equiv0$；同理，在$(\frac{1}{2},1]$上，$p_{1,x}\equiv0$。
+
+因此，在$[0,\frac{1}{2})$上有：
+\begin{align}
+    u_1 \geq u_2 & \ and \ p_{2,x}=0 \notag \\
+    v_1-tx-p_1(x) &\geq v_2-t(1-x)-p_2(x) \notag \\
+    v_1-tx-p_1(x) &\geq v_2-t(1-x) \notag \\
+   0\leq p_1(x) & \leq t-2tx 
+\end{align}
+为使利润尽可能地高，厂商应尽量提高价格因此有:
+\begin{equation}
+    p_1(x) = t-2tx 
+\end{equation}
+
+同理，在$(\frac{1}{2},1]$上，厂商2的价格满足：
+\begin{equation}
+    p_2(x) = -t+2tx 
+\end{equation}
+
+因此，在均衡时，价格$(p_1^{\star},p_2^{\star})$为：
+\begin{equation}
+p_1^{\star}(x)=
+    \begin{cases}
+      &  t-2tx,  \ x \in [0,\frac{1}{2}] \\
+     &0 ,\  x \in ( \frac{1}{2},1]
+    \end{cases}
+\end{equation}
+\begin{equation}
+p_2^{\star}(x)= 
+    \begin{cases}
+     & 0,  \ x \in [0,\frac{1}{2}] \\
+     & -t+2tx ,\  x \in ( \frac{1}{2},1]
+    \end{cases}
+\end{equation}
+
+\qsubpart
+对于消费者x所能接受的最大价格取决于效用，而其效用与其分布无关，因此与第三问相同，最大价格$p^m_{1,x}$，$p^m_{2,x}$等价于式(1.18)、式(1.19)。
+
+同样的，假设第一问的消费者剩余为$S^{\alpha}$，均衡点（消费者效用无差异）为$x_0^{\alpha}$，均衡价格为$(p_1^{\star(\alpha)},p_2^{\star(\alpha)})$；第二问的消费者剩余为$S^{\beta}$，均衡点）为$x_0^{\beta}$,均衡价格为$(p_1^{\star(\beta)},p_2^{\star(\beta)})$：
+
+\begin{align}
+    S^{\alpha} &= \int_0^{x_0^{\alpha}}(p_1^m-p_1^{\star(\alpha)})f(x)dx+\int_{x_0^{\alpha}}^{1}(p_2^m-p_2^{\star(\alpha)})f(x)dx \\
+    S^{\beta} &= \int_0^{x_0^{\beta}}(p_1^m-p_1^{\star(\beta)})f(x)dx+\int_{x_0^{\beta}}^{1}(p_2^m-p_2^{\star(\beta)})f(x)dx 
+\end{align}
+
+将式(1.25)、式(1.33-34)、式(1.36)、式(1.43)及(1.47-48)代入式(1.49)与式(1.50)整理得到:
+\begin{align}
+S^\alpha &=\int_0^{x_0^\alpha}\left(p_1^m-p_1^{\star(\alpha)}\right) f(x) d x+\int_{x_0^\alpha}^1\left(p_2^m-p_2^{\star(\alpha)}\right) f(x) d x \notag\\
+&=\int_0^{x_0^\alpha}\left(v_1-t x-p_1^{\star(\alpha)}\right) d F(x)+\int_{x_0^\alpha}^1\left(v_2-t+t x-p_2^{\star(\alpha)}\right) d F(x) \notag\\
+&=\left.\left(v_1-t x-p_1^{\star(\alpha)}\right) F(x)\right|_0 ^{x_0^\alpha}-\int_0^{x_0^\alpha} F(x) d\left(v_1-t x-p_1^{\star(\alpha)}\right)+\left.\left(v_2-t+t x-p_2^{\star(\alpha)}\right) F(x)\right|_{x_0^\alpha} ^1 \notag\\
+& \quad-\int_{ x_0^\alpha}^1 F(x) d\left(v_2-t+t x-p_2^{\star(\alpha)}\right)\notag \\
+&=\left(v_1-t x_0^\alpha-p_1^{\star(\alpha)}\right)\left(x_0^\alpha\right)^a+v_2-t+t-p_2^{\star(\alpha)}-\left(v_2-t+t x_0^\alpha-p_2^{\star(\alpha)}\right)\left(x_0^{\alpha}\right)^a\notag \\
+&=v_2-p_2^{\star (\alpha)}+\frac{2 t\left(\frac{a p_1^{\star(\alpha)}}{2 t}\right)^{a+1}-t}{a+1} \notag \\
+&=v_2-(a+1) p_1^{\star(\alpha)}+t+\frac{\left(\frac{a p_1^{\star(\alpha)}}{2 t}\right)^a a p_1^{\star(\alpha)}}{a+1}-\frac{t}{a+1} \notag \\
+&=v_2+\frac{a t}{a+1}+\left[\frac{a p_1^{\star(\alpha)}}{p_1^{\star(\alpha)}+p_2^{\star(\alpha)}} p_1^{\star(\alpha)}-(a+1)^2 p_1^{\star(\alpha)}\right] \bigg/(a+1)
+\end{align}
+
+\begin{align}
+ S^b&=\int_0^{x_0^\beta}\left(p_1^m-p_1^{\star(\beta)}\right) f(x) d x+\int_{x_0^\beta}^1\left(p_2^m-p_2^{\star(\beta)}\right) f(x) d x \notag\\
+&=\int_0^{1 / 2}\left(v_1-t x-t+2tx\right) d F(x)+\int_{1 / 2}^1\left(v_2+t x-t+t-2 t x\right) d F(x) \notag\\
+&=\left.\left(v_1-t+t x\right) F(x)\right|_0 ^{1 / 2}+\left.\left(v_2-t x\right) F(x)\right|_{1 / 2} ^1-\int_0^{1 / 2} F(x) d\left(v_1+t x-t\right)-\int_{1 / 2}^1 F(x) d\left(v_2-t x\right) \notag\\
+&=\left(\frac{1}{2}\right)^a\left(v_1-v_2-\frac{t}{2}+\frac{t}{2}\right)+v_2-t-t \int_0^{1 / 2} x^a d x+t \int_{1 / 2}^1 x^a d x \notag\\
+&=v_2-t+t \frac{1-\left(\frac{1}{2}\right)^{a+1} \times 2}{a+1}\notag\\
+&=v_2-\frac{a t}{a+1}-\frac{t2^{-a}}{a+1} 
+\end{align}
+
+当消费者总剩余减少时，有$S^b<S^a$：
+\begin{align}
+&S^a-S^b=\frac{2 at+2^{- a}t}{a+1}+\left[\frac{a p_1^{\star(\alpha)}}{(a+2) p_1^{\star(\alpha)}-t} p_1^{\star(\alpha)}-(a+1)^2 p_1^{\star(\alpha)}\right] /(a+1)>0 \notag\\
+&=2 a t+2^{-a} t+\frac{a p_1^{\star(\alpha)}^2}{(a+2) p_1^{\star(\alpha)}-t}-\left(a+1)^2 p_1^{\star(\alpha)}>0\right\notag\\
+&=\left(2 a+2^{-a}\right) \frac{t}{p_1^{\star(\alpha)}}+\frac{a}{(a+2)-\frac{t}{p_1^{\star(\alpha)}}}-(a+1)^2>0 \notag\\
+& Let \  \frac{t}{p_1^{\star(\alpha)}}=m \notag\\
+&=\left(2 a+2^{-a}\right) m+\frac{a}{(a+2)-m}-(a+1)^2>0 \notag\\
+&=-\left(2 a+2^{-a}\right) m^2+\left[\left(2 a+2^{-a}\right)(a+2)+(a+1)^2\right] m+\left[a-(a+1)^2(a+2)\right]>0   \\
+&\therefore m\in \left\bigg(\frac{1}{2\left(-2 a-2^{-a}\right)}\left(-(a+1)^2-(a+2)\left(2 a+2^{-a}\right)-\right.\notag\\
+&\left.\sqrt{\left((a+1)^2+(a+2)\left(2 a+2^{-a}\right)\right)^2-4\left(-2 a-2^{-a}\right)\left(a-(a+1)^2(a+2)\right)}\right), \notag \\
+&\frac{1}{2\left(-2 a-2^{-a}\right)}\left(-(a+1)^2-(a+2)\left(2 a+2^{-a}\right)+\right. \notag\\
+&\left.\sqrt{\left((a+1)^2+(a+2)\left(2 a+2^{-a}\right)\right)^2-4\left(-2 a-2^{-a}\right)\left(a-(a+1)^2(a+2)\right)}\right)\right\bigg)
+\end{align}
+即当$t$满足：
+\begin{align}
+   t &>\frac{p_1^{\star(\alpha)} }{2\left(-2 a-2^{-a}\right)}\left(-(a+1)^2-(a+2)\left(2 a+2^{-a}\right)-\right.\notag\\
+&\left.\sqrt{\left((a+1)^2+(a+2)\left(2 a+2^{-a}\right)\right)^2-4\left(-2 a-2^{-a}\right)\left(a-(a+1)^2(a+2)\right)}\right) 
+\end{align}
+且
+\begin{align}
+   t &<\frac{p_1^{\star(\alpha)} }{2\left(-2 a-2^{-a}\right)}\left(-(a+1)^2-(a+2)\left(2 a+2^{-a}\right)+\right.\notag\\
+&\left.\sqrt{\left((a+1)^2+(a+2)\left(2 a+2^{-a}\right)\right)^2-4\left(-2 a-2^{-a}\right)\left(a-(a+1)^2(a+2)\right)}\right) 
+\end{align}
+此时，消费者总剩余减少。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+
+\question
+\textbf{厂商的Nash均衡定价为$v$。}
+
+对所有厂商而言，在第$k$次被消费者搜寻到并询价的概率$f(k)$均为：
+\begin{align}
+     f(k) &= \frac{\binom{n-1}{k-1}(k-1)!}{\binom{n}{k}(k)!}  \notag\\   
+     &=\frac{1}{n}
+\end{align}
+假设厂商i的定价为$p_i$，在第$k$次搜索询价中商品被购买，那么其收益为$w_{i,k}$，期望收益为$E(w_{i,k})$，有：
+\begin{align}
+    w_{i,k} &= p_i \notag \\ 
+    E(w_{i,k}) &= f(k)w_{i,k} +0 \notag \\
+    &=\frac{p_i}{n}
+\end{align}
+
+
+对于消费者而言，在询价后有三种状态：购买、退出、继续搜索并询价。其中，继续搜索并询价只能是中间状态，即总是存在$l\in [1,n-1]$，在$l$次询价并搜索后，消费者会在第$l+1$次询价结束后要么选择购买，要么选择退出市场，因此接下来只讨论购买和退出时消费者的策略。
+
+假设消费者的效用为$u$，期望效用为$E(u)$。
+
+
+\textbf{假设消费者在第$k$次搜索询价中购买了厂商i的商品：}
+
+消费者的效用为：
+\begin{equation}
+    u_{k,i}=v-(k-1)s-p_i
+\end{equation}
+那么，消费者对在第$k$次询价搜索中购买商品的期望效用即为：
+\begin{align}
+    E(u_k) &= \sum_{i=1}^{n}u_{k,i}f(k) \notag\\
+    &=\frac{1}{n}\left[n(v+s-ks)-\sum_{i=1}^np_i\right] 
+\end{align}
+由于消费者不参与定价，则要使自己的期望效用最大，只能选择最优的搜寻次数$k^{\star}$：
+\begin{align}
+    k^{\star} &= \mathop{\arg\max}\limits_k E(u_k) \notag\\
+    &= \mathop{\arg\max}\limits_k \frac{1}{n}\left[n(v+s-ks)-\sum_{i=1}^np_i\right] \notag \\
+    &=\mathop{\arg\max}\limits_k \ v+s-ks
+\end{align}
+式(2.5)第二行到第三行的变换是因为$\sum_{i=1}^np_i$与$k$的取值无关，所以可以忽略。
+
+
+显然，式(2.5)关于$k$单调递减，因此无论厂商如何定价，对消费者而言要想获得最优期望效用最好的搜索次数是$k^{\star}=1$，即在进入市场的第一次搜索中就购买。
+
+
+\textbf{接下来，考虑消费者退出市场的情况：假设消费者在第$k$次搜寻询价后就退出了市场：}
+
+此时，消费者的期望效用为：
+\begin{align}
+    E(u_k) = u_k = -(k-1)s
+\end{align}
+显然，式(2.6)也是关于$k$单调递减，因此要使自己的期望效用最大，消费者应当在第一次搜索询价后立即退出，即$k^{\star}=1$。
+
+综上，无论消费者最终是要购买商品还是退出市场，消费者最优的搜索询价次数都是$k^{\star}=1$。
+
+\textbf{最后，考虑在消费者最好的策略给定后，厂商的策略：}
+
+因为无论厂商如何定价，消费者总是在第一次搜索询价时购买或退出能获得最好的期望效用，因此，若厂商想要将商品售出，则厂商i的定价$p_i$应当满足:
+\begin{align}
+    v - p_i \geq 0
+\end{align}
+因为厂商i的期望收益关于$p_i$单调递增，厂商有充足的动力将价格定在消费者能接受的最高价格上，也就是$p_i^{\star}=p^{\star}=v$。
+
+需要注意的是，当$p_i^{\star}=p^{\star}=v$时，消费者的效用为零，此时消费者既有可能退出市场，也有可能购买商品。因此，有必要对上述均衡是否存在再做进一步的说明：\textbf{即是否存在某一个厂商j为了提高消费者购买商品的几率而改变价格（如将价格定为$p_j = p^{\star}-\epsilon$，$\epsilon$是一个极小正值）。}
+
+从生活经验上说，当消费者的效用越大，选择购买的概率越高，否则就没有讨论的必要。因此不妨假定消费者在第一次搜价时若$u>0$则一定会购买商品，那么厂商j的期望收益为：
+\begin{align}
+    E(w_j)&=\frac{1}{n}p_j \notag \\
+    &=\frac{p^{\star}}{n}-\frac{\epsilon}{n}
+\end{align}
+
+而对于其他厂商，由于将价格定在$p^{\star}=v$上，其期望收益为：
+\begin{align}
+    E(w_{-j})&=\frac{1}{n}p^{\star}g(0) \notag \\
+    &=\frac{p^{\star}}{n}g(0)
+\end{align}
+其中g(0)是当效用为0时消费者选择购买商品的概率，取值范围为[0,1]。
+
+若$p^{\star}=v$是Nash均衡，即当其他厂商的定价为$v$时，任意厂商的最优定价也是$v$，而没有动力去改变，则应当满足：
+\begin{align}
+    E(w_{-j})&\geq  E(w_j) \notag \\
+    \frac{p^{\star}}{n}g(0) &\geq \frac{p^{\star}}{n}-\frac{\epsilon}{n} \notag \\
+    g(0)&\geq 1-\frac{\epsilon}{p^{\star}} 
+\end{align}
+又因为$\epsilon$是任意可取的正值，因此若$p^{\star}$是Nash均衡，则$g(0)\geq1$，又因为$g(0)\leq 1$，必有：
+\begin{align}
+    g(0) = 1
+\end{align}
+即，当且仅当消费者在效用为零时也一定会购买商品时，才会存在Nash均衡定价，此时Nash均衡定价为$p^{\star}=v$。
+
+
+
+
+
+
+
+
+
+
+
+
